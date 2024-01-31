@@ -1,12 +1,13 @@
-﻿using ExaminationSystemOOP.Entities.Exams;
+﻿using ExaminationSystemOOP.Entities;
+using ExaminationSystemOOP.Entities.Exams;
 using ExaminationSystemOOP.Interfaces;
 using ExaminationSystemOOP.Statics.GetConsole;
 
-namespace ExaminationSystemOOP.Statics.Exam
+namespace ExaminationSystemOOP.Statics.Exams
 {
     internal static class ExamType
     {
-        public static IExam GetExam()
+        public static IExam GetExam(Subject subject)
         {
             Console.WriteLine("Choose Exam Type: \n1) Practical\n2)Final");
 
@@ -15,12 +16,14 @@ namespace ExaminationSystemOOP.Statics.Exam
             if (choose == 1)
                 return new ExamPractical(
                     ExamDetails.GetExamTimeNum(),
-                    ExamDetails.GetExamQuestionNum()
+                    ExamDetails.GetExamQuestionNum(),
+                    subject
                     );
 
             return new ExamFinal(
                 ExamDetails.GetExamTimeNum(),
-                ExamDetails.GetExamQuestionNum()
+                ExamDetails.GetExamQuestionNum(),
+                subject
                 );
         }
 

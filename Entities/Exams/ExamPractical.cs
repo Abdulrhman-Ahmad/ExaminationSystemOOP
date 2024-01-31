@@ -18,7 +18,7 @@ namespace ExaminationSystemOOP.Entities.Exams
         #endregion
 
         #region Ctor
-        public ExamPractical(int time, int num) : base(time, num)
+        public ExamPractical(int time, int num, Subject subject) : base(time, num, subject)
         {
             MCQs = new List<QuestionMCQ>();
         }
@@ -38,6 +38,18 @@ namespace ExaminationSystemOOP.Entities.Exams
                     ));
             }
         }
-        public override void ShowExam() { }
+        public override void ShowExam()
+        {
+            Console.Clear();
+            Console.WriteLine($"Exam To {Subject}");
+            Console.WriteLine("----------------------------");
+            for(int i = 0; i < NumOfQuestions; i++)
+            {
+                Console.WriteLine($"Q{i+1}) " + MCQs[i]);
+            }
+
+
+            Console.ReadKey();
+        }
     }
 }

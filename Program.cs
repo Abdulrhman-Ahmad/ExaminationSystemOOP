@@ -1,7 +1,6 @@
 ﻿using ExaminationSystemOOP.Entities;
 using ExaminationSystemOOP.Interfaces;
-using ExaminationSystemOOP.Statics.Exam;
-using ExaminationSystemOOP.Statics.GetConsole;
+using ExaminationSystemOOP.Statics.GetSubject;
 
 namespace ExaminationSystemOOP
 {
@@ -9,12 +8,11 @@ namespace ExaminationSystemOOP
     {
         static void Main()
         {
-            Subject subject = new Subject(1,"English");
+            Subject subject = GetSubject.GetSubjectValue();
 
             IExam exam = subject.CreateExam();
 
             exam.ShowExam();
-
         }
     }
 }

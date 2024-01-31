@@ -47,7 +47,7 @@ namespace ExaminationSystemOOP.Statics.Question
 
             answerId = GetNumber.GetIntegerValue(1, 4);
 
-            return Choices[answerId];
+            return Choices[answerId - 1];
         }
         #endregion
 

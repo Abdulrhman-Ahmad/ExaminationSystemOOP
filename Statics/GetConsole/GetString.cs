@@ -26,12 +26,15 @@ namespace ExaminationSystemOOP.Statics.GetConsole
                 }
             }
 
+            Console.Clear();
             return text;
         }
 
         public static string GetStringValue()
         {
-            return Console.ReadLine() ?? "";
+            string text = Console.ReadLine() ?? "";
+            Console.Clear();
+            return text;
         }
     }
 }

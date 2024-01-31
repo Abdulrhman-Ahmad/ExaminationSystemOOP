@@ -18,17 +18,16 @@ namespace ExaminationSystemOOP.Statics.GetConsole
                         Validation = true;
                     else
                     {
-                        Console.Clear();
                         Console.WriteLine("Zero Value Not Accepted! \nThe number must be greater that 0");
                     }
                 }
                 catch
                 {
-                    Console.Clear();
                     Console.WriteLine("Wrong Format! \nPlease Enter a Correct Format");
                 }
             }
 
+            Console.Clear();
             return number;
         }
 
@@ -56,6 +55,7 @@ namespace ExaminationSystemOOP.Statics.GetConsole
                 }
             }
 
+            Console.Clear();
             return number;
         }
     }

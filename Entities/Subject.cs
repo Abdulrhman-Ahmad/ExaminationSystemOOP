@@ -1,7 +1,7 @@
 ﻿using ExaminationSystemOOP.Entities.Exams;
 using ExaminationSystemOOP.Interfaces;
 using ExaminationSystemOOP.Question;
-using ExaminationSystemOOP.Statics.Exam;
+using ExaminationSystemOOP.Statics.Exams;
 using ExaminationSystemOOP.Statics.Question;
 
 namespace ExaminationSystemOOP.Entities
@@ -21,12 +21,16 @@ namespace ExaminationSystemOOP.Entities
 
         public IExam CreateExam()
         {
-            IExam exam =  ExamType.GetExam();
+            IExam exam =  ExamType.GetExam(this);
 
             exam.CreateExam();
 
             return exam;
         }
 
+        public override string ToString()
+        {
+            return $"({SubjectId}) {SubjectName}";
+        }
     }
 }

@@ -20,5 +20,10 @@ namespace ExaminationSystemOOP.Entities
             AnswerText = text;
         }
         #endregion
+
+        public override string ToString()
+        {
+            return $"{AnswerId}){AnswerText}";
+        }
     }
 }

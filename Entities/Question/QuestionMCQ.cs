@@ -20,9 +20,12 @@ namespace ExaminationSystemOOP.Question
         {
             CorrectAnswer = MCQ.GetAnswer(answers);
             Answers = answers;
-        } 
+        }
         #endregion
 
-        
+        public override string ToString()
+        {
+            return $"{Body}\n{Answers[0]}  {Answers[1]}  {Answers[2]}  {Answers[3]}";
+        }
     }
 }

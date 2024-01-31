@@ -1,6 +1,6 @@
 ﻿using ExaminationSystemOOP.Statics.GetConsole;
 
-namespace ExaminationSystemOOP.Statics.Exam
+namespace ExaminationSystemOOP.Statics.Exams
 {
     internal static class ExamDetails
     {

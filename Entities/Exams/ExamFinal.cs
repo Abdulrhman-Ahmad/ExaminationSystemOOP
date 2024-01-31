@@ -15,7 +15,7 @@ namespace ExaminationSystemOOP.Entities.Exams
         #endregion
 
         #region Ctor
-        public ExamFinal(int time, int num) : base(time, num)
+        public ExamFinal(int time, int num, Subject subject) : base(time, num, subject)
         {
             MCQs = new List<QuestionMCQ>();
             TrueOrFalse = new List<QuestionTF>();
