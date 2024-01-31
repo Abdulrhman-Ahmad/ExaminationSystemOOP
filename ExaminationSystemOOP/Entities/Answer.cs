@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP
+namespace ExaminationSystemOOP.Entities
 {
     internal class Answer
     {
@@ -18,7 +18,7 @@ namespace ExaminationSystemOOP
         {
             AnswerId = id;
             AnswerText = text;
-        } 
+        }
         #endregion
     }
 }

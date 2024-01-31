@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP.Exam
+namespace ExaminationSystemOOP.Entities.Exam
 {
     internal class ExamFinal : Exam
     {
@@ -20,8 +20,8 @@ namespace ExaminationSystemOOP.Exam
         }
         #endregion
 
-        public override void CreateExam(){}
+        public override void CreateExam() { }
 
-        public override void ShowExam(){}
+        public override void ShowExam() { }
     }
 }

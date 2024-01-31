@@ -1,5 +1,5 @@
 ﻿using ExaminationSystemOOP.Question;
-using ExaminationSystemOOP.Statics;
+using ExaminationSystemOOP.Statics.Question;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP.Exam
+namespace ExaminationSystemOOP.Entities.Exam
 {
     internal class ExamPractical : Exam
     {
@@ -25,8 +25,8 @@ namespace ExaminationSystemOOP.Exam
 
         public override void CreateExam()
         {
-            for (int i= 0; i < NumOfQuestions; i++) 
-            { 
+            for (int i = 0; i < NumOfQuestions; i++)
+            {
                 Console.WriteLine($"Enter Question Num: {i + 1}/{NumOfQuestions}):");
 
                 MCQs?.Add(new QuestionMCQ(
@@ -37,6 +37,6 @@ namespace ExaminationSystemOOP.Exam
                     ));
             }
         }
-        public override void ShowExam(){}
+        public override void ShowExam() { }
     }
 }

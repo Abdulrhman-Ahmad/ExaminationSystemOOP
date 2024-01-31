@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ExaminationSystemOOP.Entities;
+using ExaminationSystemOOP.Statics.GetConsole;
 
-namespace ExaminationSystemOOP.Statics
+namespace ExaminationSystemOOP.Statics.Question
 {
     internal static class MCQ
     {
-
         #region Get Question Header
         public static string GetHeader()
         {
@@ -20,7 +15,9 @@ namespace ExaminationSystemOOP.Statics
         #region Get Question Body
         public static string GetBody()
         {
-            return Console.ReadLine()?.ToString() ?? "";
+            const int MinBodyLength = 5;
+
+            return GetString.GetStringValue(MinBodyLength);
         }
         #endregion
 
@@ -29,23 +26,27 @@ namespace ExaminationSystemOOP.Statics
         {
             Answer[] result = new Answer[4];
 
+            #region Fill Choices Array
             for (int i = 0; i < result.Length; i++)
             {
                 Console.WriteLine($"Enter Choice Num {i + 1}/4):");
                 result[i] = new Answer(i + 1, Console.ReadLine() ?? "N/A");
             }
-
+            #endregion
 
             return result;
         }
-
         #endregion
 
         #region Get Correct Answer
         public static Answer GetAnswer(Answer[] Choices)
         {
             Console.WriteLine("Enter the Correct AnswerId:");
-            int answerId = Convert.ToInt32(Console.ReadLine());
+
+            int answerId = 0;
+
+            answerId = GetNumber.GetIntegerValue(1, 4);
+
             return Choices[answerId];
         }
         #endregion
@@ -53,8 +54,9 @@ namespace ExaminationSystemOOP.Statics
         #region Get Question Mark
         public static int GetMark()
         {
-            Console.ReadLine("Enter the Question Mark");
-            return Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Question Mark");
+
+            return GetNumber.GetIntegerValue();
         }
         #endregion
     }

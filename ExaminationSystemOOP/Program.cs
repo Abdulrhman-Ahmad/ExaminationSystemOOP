@@ -1,4 +1,7 @@
-﻿using ExaminationSystemOOP.Exam;
+﻿using ExaminationSystemOOP.Entities.Exam;
+using ExaminationSystemOOP.Interfaces;
+using ExaminationSystemOOP.Statics.GetConsole;
+using ExaminationSystemOOP.Statics.Exam;
 
 namespace ExaminationSystemOOP
 {
@@ -6,8 +9,11 @@ namespace ExaminationSystemOOP
     {
         static void Main()
         {
-            ExamPractical exam = new ExamPractical(60, 4);
+
+            IExam exam = ExamType.GetExam();
+
             exam.CreateExam();
+
         }
     }
 }

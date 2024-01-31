@@ -1,4 +1,5 @@
-﻿using ExaminationSystemOOP.Statics;
+﻿using ExaminationSystemOOP.Entities;
+using ExaminationSystemOOP.Statics.Question;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace ExaminationSystemOOP.Question
 {
     internal class QuestionMCQ : Question
     {
-
         #region Properties
         public Answer[] Answers;
         public Answer CorrectAnswer;

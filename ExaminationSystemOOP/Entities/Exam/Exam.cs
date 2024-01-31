@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ExaminationSystemOOP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP.Exam
+namespace ExaminationSystemOOP.Entities.Exam
 {
-    internal abstract class Exam
+    internal abstract class Exam : IExam
     {
         #region Properties
         public int Time { get; set; }
@@ -21,10 +22,7 @@ namespace ExaminationSystemOOP.Exam
         }
         #endregion
 
-
-        #region Methods
+        public abstract void CreateExam();
         public abstract void ShowExam();
-        public abstract void CreateExam(); 
-        #endregion
     }
 }
