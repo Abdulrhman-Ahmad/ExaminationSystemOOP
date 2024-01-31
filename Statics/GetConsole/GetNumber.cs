@@ -3,6 +3,7 @@ namespace ExaminationSystemOOP.Statics.GetConsole
 {
     internal static class GetNumber
     {
+        #region GetIntegerValue
         public static int GetIntegerValue()
         {
             int number = 0;
@@ -30,7 +31,9 @@ namespace ExaminationSystemOOP.Statics.GetConsole
             Console.Clear();
             return number;
         }
+        #endregion
 
+        #region GetIntegerRange
         public static int GetIntegerValue(int min, int max)
         {
             int number = 0;
@@ -57,6 +60,7 @@ namespace ExaminationSystemOOP.Statics.GetConsole
 
             Console.Clear();
             return number;
-        }
+        } 
+        #endregion
     }
 }

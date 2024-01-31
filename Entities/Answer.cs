@@ -21,9 +21,11 @@ namespace ExaminationSystemOOP.Entities
         }
         #endregion
 
+        #region ToString Override
         public override string ToString()
         {
             return $"{AnswerId}){AnswerText}";
-        }
+        } 
+        #endregion
     }
 }

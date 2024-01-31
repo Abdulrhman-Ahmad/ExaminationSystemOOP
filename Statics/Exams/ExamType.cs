@@ -7,9 +7,10 @@ namespace ExaminationSystemOOP.Statics.Exams
 {
     internal static class ExamType
     {
+        #region GetExam
         public static IExam GetExam(Subject subject)
         {
-            Console.WriteLine("Choose Exam Type: \n1) Practical\n2)Final");
+            Console.WriteLine("Choose Exam Type: \n1) Practical Exam\n2) Final Exam");
 
             int choose = GetNumber.GetIntegerValue(1, 2);
 
@@ -25,9 +26,7 @@ namespace ExaminationSystemOOP.Statics.Exams
                 ExamDetails.GetExamQuestionNum(),
                 subject
                 );
-        }
-
-
-
+        } 
+        #endregion
     }
 }

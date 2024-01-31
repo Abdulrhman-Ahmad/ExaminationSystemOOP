@@ -1,7 +1,7 @@
 ﻿using ExaminationSystemOOP.Entities;
 using ExaminationSystemOOP.Statics.GetConsole;
 
-namespace ExaminationSystemOOP.Statics.Question
+namespace ExaminationSystemOOP.Statics.Questions
 {
     internal static class MCQ
     {
@@ -15,7 +15,7 @@ namespace ExaminationSystemOOP.Statics.Question
         #region Get Question Body
         public static string GetBody()
         {
-            const int MinBodyLength = 5;
+            const int MinBodyLength = 1;
 
             return GetString.GetStringValue(MinBodyLength);
         }

@@ -1,12 +1,6 @@
-﻿using ExaminationSystemOOP.Interfaces;
-using ExaminationSystemOOP.Question;
-using ExaminationSystemOOP.Statics.Question;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ExaminationSystemOOP.Question;
+using ExaminationSystemOOP.Statics.Exams;
+using ExaminationSystemOOP.Statics.Questions;
 
 namespace ExaminationSystemOOP.Entities.Exams
 {
@@ -24,7 +18,8 @@ namespace ExaminationSystemOOP.Entities.Exams
         }
         #endregion
 
-        public override void CreateExam() 
+        #region CreateExam
+        public override void CreateExam()
         {
             for (int i = 0; i < NumOfQuestions; i++)
             {
@@ -38,18 +33,13 @@ namespace ExaminationSystemOOP.Entities.Exams
                     ));
             }
         }
+        #endregion
+
+        #region ShowExam
         public override void ShowExam()
         {
-            Console.Clear();
-            Console.WriteLine($"Exam To {Subject}");
-            Console.WriteLine("----------------------------");
-            for(int i = 0; i < NumOfQuestions; i++)
-            {
-                Console.WriteLine($"Q{i+1}) " + MCQs[i]);
-            }
-
-
-            Console.ReadKey();
-        }
+            ExamResult.ShowResult(MCQs, null,ShowQuestions.ShowQuestion(MCQs, null));
+        } 
+        #endregion
     }
 }

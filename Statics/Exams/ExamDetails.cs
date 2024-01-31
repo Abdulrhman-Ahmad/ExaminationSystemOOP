@@ -4,6 +4,7 @@ namespace ExaminationSystemOOP.Statics.Exams
 {
     internal static class ExamDetails
     {
+        #region GetExamTime
         public static int GetExamTimeNum()
         {
             const int minTime = 20;
@@ -13,12 +14,15 @@ namespace ExaminationSystemOOP.Statics.Exams
 
             return GetNumber.GetIntegerValue(minTime, maxTime);
         }
+        #endregion
 
+        #region GetExamQuestionNum
         public static int GetExamQuestionNum()
         {
             Console.WriteLine("Please Enter the Num of the Questions");
 
             return GetNumber.GetIntegerValue();
-        }
+        } 
+        #endregion
     }
 }

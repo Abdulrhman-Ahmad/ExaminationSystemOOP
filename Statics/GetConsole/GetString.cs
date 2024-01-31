@@ -9,6 +9,7 @@ namespace ExaminationSystemOOP.Statics.GetConsole
 {
     internal class GetString
     {
+        #region GetStringRange
         public static string GetStringValue(int minLength)
         {
             string text = "";
@@ -29,12 +30,15 @@ namespace ExaminationSystemOOP.Statics.GetConsole
             Console.Clear();
             return text;
         }
+        #endregion
 
+        #region GetStringValue
         public static string GetStringValue()
         {
             string text = Console.ReadLine() ?? "";
             Console.Clear();
             return text;
-        }
+        } 
+        #endregion
     }
 }

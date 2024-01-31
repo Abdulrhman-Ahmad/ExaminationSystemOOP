@@ -9,18 +9,22 @@ namespace ExaminationSystemOOP.Statics.GetSubject
 {
     internal class SubjectDetails
     {
+        #region GetSubjectId
         public static int GetSubjectId()
         {
-            Console.WriteLine("Please Enter Subject Id");
+            Console.Write("Please Enter Subject Id: ");
             return GetNumber.GetIntegerValue();
         }
+        #endregion
 
+        #region GetSubjectName
         public static string GetSubjectName()
         {
             const int MinLength = 3;
 
-            Console.WriteLine("Please Enter Subject Name");
+            Console.Write("Please Enter Subject Name: ");
             return GetString.GetStringValue(MinLength);
-        }
+        } 
+        #endregion
     }
 }

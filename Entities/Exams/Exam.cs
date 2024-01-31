@@ -12,7 +12,6 @@ namespace ExaminationSystemOOP.Entities.Exams
         #region Properties
         public int Time;
         public int NumOfQuestions;
-
         public Subject Subject;
         #endregion
 
@@ -25,7 +24,9 @@ namespace ExaminationSystemOOP.Entities.Exams
         }
         #endregion
 
+        #region Abstract Methods
         public abstract void ShowExam();
-        public abstract void CreateExam();
+        public abstract void CreateExam(); 
+        #endregion
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExaminationSystemOOP.Entities;
+﻿using ExaminationSystemOOP.Entities;
+using ExaminationSystemOOP.Statics.Questions;
 
 namespace ExaminationSystemOOP.Question
 {
@@ -11,13 +7,20 @@ namespace ExaminationSystemOOP.Question
     {
         #region Properties
         public Answer[] Answers = [new Answer(1, "True"), new Answer(2, "False")];
-        public Answer CorrectAnswer { get; set; }
+        public Answer CorrectAnswer;
         #endregion
 
         #region Ctor
         public QuestionTF(string header, string body, int mark) : base(header, body, mark)
         {
+            CorrectAnswer = MCQ.GetAnswer(Answers);
+        }
+        #endregion
 
+        #region ToString Override
+        public override string ToString()
+        {
+            return $"{Body}\n{Answers[0]}\n {Answers[1]}";
         } 
         #endregion
     }

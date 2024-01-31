@@ -1,5 +1,5 @@
 ﻿using ExaminationSystemOOP.Entities;
-using ExaminationSystemOOP.Statics.Question;
+using ExaminationSystemOOP.Statics.Questions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +23,11 @@ namespace ExaminationSystemOOP.Question
         }
         #endregion
 
+        #region ToString Override
         public override string ToString()
         {
-            return $"{Body}\n{Answers[0]}  {Answers[1]}  {Answers[2]}  {Answers[3]}";
-        }
+            return $"{Body}\n{Answers[0]}  \n{Answers[1]}  \n{Answers[2]}  \n{Answers[3]}";
+        } 
+        #endregion
     }
 }
