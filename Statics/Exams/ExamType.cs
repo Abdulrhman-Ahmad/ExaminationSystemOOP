@@ -14,18 +14,22 @@ namespace ExaminationSystemOOP.Statics.Exams
 
             int choose = GetNumber.GetIntegerValue(1, 2);
 
+            #region Return Practical
             if (choose == 1)
                 return new ExamPractical(
                     ExamDetails.GetExamTimeNum(),
                     ExamDetails.GetExamQuestionNum(),
                     subject
                     );
+            #endregion
 
+            #region Return Final
             return new ExamFinal(
-                ExamDetails.GetExamTimeNum(),
-                ExamDetails.GetExamQuestionNum(),
-                subject
-                );
+                    ExamDetails.GetExamTimeNum(),
+                    ExamDetails.GetExamQuestionNum(),
+                    subject
+                    ); 
+            #endregion
         } 
         #endregion
     }

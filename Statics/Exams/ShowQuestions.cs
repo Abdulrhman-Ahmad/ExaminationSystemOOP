@@ -6,7 +6,7 @@ namespace ExaminationSystemOOP.Statics.Exams
     internal static class ShowQuestions
     {
         #region Show Question
-        public static int ShowQuestion(List<QuestionMCQ> mcqs, List<QuestionTF>? tfs)
+        public static int ShowQuestion(List<QuestionMCQ>? mcqs, List<QuestionTF>? tfs)
         {
             #region Attributes
             int grade = 0;

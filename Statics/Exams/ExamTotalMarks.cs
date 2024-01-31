@@ -10,7 +10,7 @@ namespace ExaminationSystemOOP.Statics.Exams
 {
     internal class ExamTotalMarks
     {
-        public static int GetTotalMarks(List<QuestionMCQ> mcqs, List<QuestionTF>? tfs)
+        public static int GetTotalMarks(List<QuestionMCQ>? mcqs, List<QuestionTF>? tfs)
         {
             int grade = 0;
 

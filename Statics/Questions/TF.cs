@@ -20,6 +20,7 @@ namespace ExaminationSystemOOP.Statics.Questions
         #region Get Question Body
         public static string GetBody()
         {
+
             const int MinBodyLength = 1;
 
             return GetString.GetStringValue(MinBodyLength);

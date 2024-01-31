@@ -4,7 +4,7 @@ namespace ExaminationSystemOOP.Statics.Exams
 {
     internal class ExamResult
     {
-        public static void ShowResult(List<QuestionMCQ> mcqs, List<QuestionTF>? tfs, int grade)
+        public static void ShowResult(List<QuestionMCQ>? mcqs, List<QuestionTF>? tfs, int grade)
         {
             #region Show MCQs
             foreach (var item in mcqs)

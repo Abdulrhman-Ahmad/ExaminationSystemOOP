@@ -13,14 +13,14 @@ namespace ExaminationSystemOOP.Question
         #region Ctor
         public QuestionTF(string header, string body, int mark) : base(header, body, mark)
         {
-            CorrectAnswer = MCQ.GetAnswer(Answers);
+            CorrectAnswer = TF.GetAnswer(Answers);
         }
         #endregion
 
         #region ToString Override
         public override string ToString()
         {
-            return $"{Body}\n{Answers[0]}\n {Answers[1]}";
+            return $"{Body}\t(Mark {Mark})\n{Answers[0]}\n{Answers[1]}";
         } 
         #endregion
     }
