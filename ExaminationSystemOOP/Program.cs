@@ -1,7 +1,6 @@
-﻿using ExaminationSystemOOP.Entities.Exam;
-using ExaminationSystemOOP.Interfaces;
-using ExaminationSystemOOP.Statics.GetConsole;
+﻿using ExaminationSystemOOP.Interfaces;
 using ExaminationSystemOOP.Statics.Exam;
+using ExaminationSystemOOP.Statics.GetConsole;
 
 namespace ExaminationSystemOOP
 {
@@ -9,11 +8,11 @@ namespace ExaminationSystemOOP
     {
         static void Main()
         {
+            GetNumber.GetIntegerValue();
 
-            IExam exam = ExamType.GetExam();
+            //IExam exam = ExamType.GetExam();
 
-            exam.CreateExam();
-
+            //exam.CreateExam();
         }
     }
 }

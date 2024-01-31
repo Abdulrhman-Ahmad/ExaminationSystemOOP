@@ -16,9 +16,15 @@ namespace ExaminationSystemOOP.Statics.GetConsole
                     number = Convert.ToInt32(Console.ReadLine());
                     if (number > 0)
                         Validation = true;
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Zero Value Not Accepted! \nThe number must be greater that 0");
+                    }
                 }
                 catch
                 {
+                    Console.Clear();
                     Console.WriteLine("Wrong Format! \nPlease Enter a Correct Format");
                 }
             }
@@ -38,13 +44,14 @@ namespace ExaminationSystemOOP.Statics.GetConsole
                 {
                     number = Convert.ToInt32(Console.ReadLine());
 
-                    if (number >= min || number <= max)
+                    if (number >= min && number <= max)
                         Validation = true;
                     else
                         Console.WriteLine($"Please Enter a Number between {min} ~ {max}");
                 }
                 catch
                 {
+                    Console.Clear();
                     Console.WriteLine("Wrong Format! \nPlease Enter a Correct Format");
                 }
             }

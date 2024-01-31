@@ -6,9 +6,12 @@ namespace ExaminationSystemOOP.Statics.Exam
     {
         public static int GetExamTimeNum()
         {
+            const int minTime = 20;
+            const int maxTime = 90;
+
             Console.WriteLine("Please Enter the Exam Time: ");
 
-            return GetNumber.GetIntegerValue();
+            return GetNumber.GetIntegerValue(minTime, maxTime);
         }
 
         public static int GetExamQuestionNum()
