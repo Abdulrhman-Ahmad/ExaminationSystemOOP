@@ -24,6 +24,8 @@ namespace ExaminationSystemOOP.Statics.Exams
             int totalGrade = ExamTotalMarks.GetTotalMarks(mcqs, tfs);
 
             Console.WriteLine($"\nYour Grade is {grade}/{totalGrade}");
+
+            Console.ReadKey();
         }
     }
 }

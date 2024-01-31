@@ -20,7 +20,7 @@ namespace ExaminationSystemOOP.Question
         #region ToString Override
         public override string ToString()
         {
-            return $"{Body}\t(Mark {Mark})\n{Answers[0]}\n{Answers[1]}";
+            return $"{Body}\n{Answers[0]}\n{Answers[1]}";
         } 
         #endregion
     }

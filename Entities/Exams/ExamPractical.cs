@@ -25,12 +25,14 @@ namespace ExaminationSystemOOP.Entities.Exams
             {
                 Console.WriteLine($"Enter Question Num: {i + 1}/{NumOfQuestions}):");
 
+                #region Add MCQ Questions
                 MCQs?.Add(new QuestionMCQ(
                     MCQ.GetHeader(),
                     MCQ.GetBody(),
                     MCQ.GetChoices(),
                     MCQ.GetMark()
-                    ));
+                    )); 
+                #endregion
             }
         }
         #endregion

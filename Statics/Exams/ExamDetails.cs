@@ -10,7 +10,7 @@ namespace ExaminationSystemOOP.Statics.Exams
             const int minTime = 20;
             const int maxTime = 90;
 
-            Console.WriteLine("Please Enter the Exam Time: ");
+            Console.Write("Please Enter the Exam Time: ");
 
             return GetNumber.GetIntegerValue(minTime, maxTime);
         }
@@ -19,7 +19,7 @@ namespace ExaminationSystemOOP.Statics.Exams
         #region GetExamQuestionNum
         public static int GetExamQuestionNum()
         {
-            Console.WriteLine("Please Enter the Num of the Questions");
+            Console.Write("Please Enter the Num of the Questions: ");
 
             return GetNumber.GetIntegerValue();
         } 
