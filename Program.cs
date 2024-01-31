@@ -8,11 +8,9 @@ namespace ExaminationSystemOOP
     {
         static void Main()
         {
-            GetNumber.GetIntegerValue();
+            IExam exam = ExamType.GetExam();
 
-            //IExam exam = ExamType.GetExam();
-
-            //exam.CreateExam();
+            exam.CreateExam();
         }
     }
 }
