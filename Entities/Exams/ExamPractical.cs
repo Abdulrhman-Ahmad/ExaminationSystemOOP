@@ -1,4 +1,5 @@
-﻿using ExaminationSystemOOP.Question;
+﻿using ExaminationSystemOOP.Interfaces;
+using ExaminationSystemOOP.Question;
 using ExaminationSystemOOP.Statics.Question;
 using System;
 using System.Collections.Generic;
@@ -7,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP.Entities.Exam
+namespace ExaminationSystemOOP.Entities.Exams
 {
     internal class ExamPractical : Exam
     {
 
         #region Questions
-        public List<QuestionMCQ>? MCQs { get; set; }
+        public List<QuestionMCQ> MCQs;
         #endregion
 
         #region Ctor
@@ -23,7 +24,7 @@ namespace ExaminationSystemOOP.Entities.Exam
         }
         #endregion
 
-        public override void CreateExam()
+        public override void CreateExam() 
         {
             for (int i = 0; i < NumOfQuestions; i++)
             {

@@ -8,7 +8,7 @@ namespace ExaminationSystemOOP.Interfaces
 {
     internal interface IExam
     {
-        void CreateExam();
         void ShowExam();
+        void CreateExam();
     }
 }

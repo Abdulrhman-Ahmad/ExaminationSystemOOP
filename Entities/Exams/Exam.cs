@@ -5,24 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExaminationSystemOOP.Entities.Exam
+namespace ExaminationSystemOOP.Entities.Exams
 {
     internal abstract class Exam : IExam
     {
         #region Properties
-        public int Time { get; set; }
-        public int NumOfQuestions { get; set; }
+        public int Time;
+        public int NumOfQuestions;
+
+        public Subject Subject;
         #endregion
 
         #region Ctor
-        public Exam(int time, int num)
+        public Exam(int time, int num, Subject subject)
         {
             Time = time;
             NumOfQuestions = num;
+            Subject = subject;
         }
         #endregion
 
-        public abstract void CreateExam();
         public abstract void ShowExam();
+        public abstract void CreateExam();
     }
 }

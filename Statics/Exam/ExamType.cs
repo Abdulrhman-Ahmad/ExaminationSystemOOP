@@ -1,4 +1,4 @@
-﻿using ExaminationSystemOOP.Entities.Exam;
+﻿using ExaminationSystemOOP.Entities.Exams;
 using ExaminationSystemOOP.Interfaces;
 using ExaminationSystemOOP.Statics.GetConsole;
 

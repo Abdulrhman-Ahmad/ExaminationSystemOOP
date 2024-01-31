@@ -1,15 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ExaminationSystemOOP.Entities.Exams;
+using ExaminationSystemOOP.Interfaces;
+using ExaminationSystemOOP.Question;
+using ExaminationSystemOOP.Statics.Exam;
+using ExaminationSystemOOP.Statics.Question;
 
 namespace ExaminationSystemOOP.Entities
 {
     internal class Subject
     {
-        public int SubjectId { get; set; }
-        public string SubjectName { get; set; }
+
+        public int SubjectId;
+        public string SubjectName;
+
+        public Subject(int id, string name) 
+        {
+            SubjectId = id;
+            SubjectName = name;
+        }
+
+
+        public IExam CreateExam()
+        {
+            IExam exam =  ExamType.GetExam();
+
+            exam.CreateExam();
+
+            return exam;
+        }
 
     }
 }
